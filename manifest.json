@@ -1,19 +1,7 @@
 {
   "short_name": "FinanTech",
   "name": "FinanTech Tracker",
-  "icons": [
-    {
-      "src": "icon.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "icon-512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": "/index.html",
+  "start_url": "./index.html",
   "background_color": "#ffffff",
   "display": "standalone",
   "theme_color": "#000000"
