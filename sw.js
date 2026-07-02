@@ -1,11 +1,13 @@
 const CACHE_NAME = 'finantech-cache-v1';
 const assets = [
-  '/',
-  '/index.html',
-  '/manifest.json'
+  './',
+  'index.html',
+  'estilo.css',
+  'script.js',
+  'manifest.json'
 ];
 
-// Instala o Service Worker e guarda os arquivos em cache
+// Instala e guarda em cache
 self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
@@ -14,7 +16,7 @@ self.addEventListener('install', e => {
   );
 });
 
-// Serve os arquivos do cache quando estiver offline
+// Responde offline
 self.addEventListener('fetch', e => {
   e.respondWith(
     caches.match(e.request).then(response => {
