@@ -43,7 +43,7 @@ header {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 10px 25px;
+    padding: 20px 25px;
     background-color: var(--destaque);
     color: #ffffff; /* Texto do cabeçalho sempre branco */
 }
@@ -67,7 +67,7 @@ section h2 {
     display: grid;
     grid-template-columns: 1fr; 
     gap: 1.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 10px;
 }
 #balance-section h2 {
     font-size: small;
@@ -80,12 +80,16 @@ section h2 {
 }
 
 /* Unificando os cartões de saldo para usarem o fundo dinâmico */
-.entrada, .saida, .saldototal {
+.entrada, .saida  {
     background-color: var(--fundo-cartao);
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     transition: background-color 0.3s;
+}
+
+.saldototal {
+    padding: 1.5rem;
 }
 
 .entrada h3, .saida h3, .saldototal h3 {
