@@ -24,3 +24,20 @@ self.addEventListener('fetch', e => {
     })
   );
 });
+
+// Evento 'activate': roda quando a nova versão (ex: v2) assume o controle
+self.addEventListener('activate', e => {
+  e.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cache => {
+          // Se o cache na memória do celular for diferente do atual, apaga o antigo
+          if (cache !== CACHE_NAME) {
+            console.log('Removendo cache antigo:', cache);
+            return caches.delete(cache);
+          }
+        })
+      );
+    })
+  );
+});
